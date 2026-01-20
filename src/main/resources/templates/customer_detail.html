@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMS | Customer Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div th:replace="~{fragments/header :: header}"></div>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${customer.name}">Customer</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary" th:text="${customer.contactName}">Contact Name</h6>
+                <p class="card-text">Email Address: <span th:text="${customer.email}"></span></p>
+                <p class="card-text">Phone Number: <span th:text="${customer.phoneNumber}"></span></p>
+                <a href="#" class="card-link btn btn-sm btn-primary" th:href="@{mailto:{to}(to=${customer.email})}">Send
+                    Email</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <th>Order Number</th>
+                <th>Order Info</th>
+            </thead>
+            <tbody>
+                <tr th:each="order : ${orders}">
+                    <td th:text="${order.id}">Order Number</td>
+                    <td th:text="${order.orderInfo}">Order Info</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

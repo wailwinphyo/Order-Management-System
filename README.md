@@ -28,9 +28,11 @@ An Order Management System built with Spring Boot 3.x and Spring Security 6, des
 
 ## 🔐 Security Features Covered
 
+- [x] HTTP Basic authentication
+- [x] Secure password storage (BCrypt)
 - [x] Form Login & Session-based authentication
-- [x] HTTP Basic authentication (for APIs)
 - [x] Role-Based Access Control (RBAC)
+- [ ] LDAP Authentication
 - [ ] Permission-based authorization
 - [ ] JWT Authentication & Authorization
 - [ ] OAuth2 Login (Google / GitHub ready)
@@ -40,10 +42,8 @@ An Order Management System built with Spring Boot 3.x and Spring Security 6, des
 - [ ] @PostAuthorize
 - [ ] CSRF protection
 - [ ] CORS configuration
-- [x] Secure password storage (BCrypt)
 - [ ] Custom security filters
 - [ ] Exception handling & access denial
-- [ ] LDAP
 ---
 
 ## 🖥️ UI Purpose

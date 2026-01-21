@@ -33,7 +33,7 @@ An Order Management System built with Spring Boot 3.x and Spring Security 6, des
 - [x] Secure password storage (BCrypt)
 - [x] Form Login & Session-based authentication
 - [x] Role-Based Access Control (RBAC)
-- [ ] LDAP Authentication
+- [x] LDAP Authentication
 - [ ] Permission-based authorization
 - [ ] JWT Authentication & Authorization
 - [ ] OAuth2 Login (Google / GitHub ready)
